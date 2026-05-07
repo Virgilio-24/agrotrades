@@ -1,0 +1,72 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+locale: 'pt'
+
+collections:
+  - name: "paginas"
+    label: "Páginas"
+    files:
+
+      - name: "inicio"
+        label: "Página Inicial"
+        file: "_data/inicio.json"
+        fields:
+          - { label: "Título principal", name: "hero_titulo", widget: "string" }
+          - { label: "Frase motivacional", name: "hero_motto", widget: "string" }
+          - { label: "Texto de introdução", name: "hero_texto", widget: "text" }
+
+      - name: "sobre"
+        label: "Sobre a Empresa"
+        file: "_data/sobre.json"
+        fields:
+          - { label: "Parágrafo 1", name: "paragrafo1", widget: "text" }
+          - { label: "Parágrafo 2", name: "paragrafo2", widget: "text" }
+          - { label: "Nome do CEO", name: "ceo_nome", widget: "string" }
+
+      - name: "campanha"
+        label: "Campanha Agrícola 2025/2026"
+        file: "_data/campanha.json"
+        fields:
+          - { label: "Título", name: "titulo", widget: "string" }
+          - { label: "Texto principal", name: "texto", widget: "text" }
+          - { label: "Citação", name: "citacao", widget: "string" }
+
+      - name: "contactos"
+        label: "Contactos"
+        file: "_data/contactos.json"
+        fields:
+          - { label: "Telefone 1", name: "tel1", widget: "string" }
+          - { label: "Telefone 2", name: "tel2", widget: "string" }
+          - { label: "Email 1", name: "email1", widget: "string" }
+          - { label: "Email 2", name: "email2", widget: "string" }
+          - { label: "Morada escritório", name: "morada", widget: "text" }
+
+  - name: "servicos"
+    label: "Serviços"
+    folder: "_data/servicos"
+    create: true
+    slug: "{{slug}}"
+    label_singular: "Serviço"
+    fields:
+      - { label: "Nome do serviço", name: "title", widget: "string" }
+      - { label: "Ícone (emoji)", name: "icone", widget: "string", default: "🌾" }
+      - { label: "Descrição", name: "descricao", widget: "text" }
+      - { label: "Activo", name: "activo", widget: "boolean", default: true }
+
+  - name: "noticias"
+    label: "Notícias / Actualizações"
+    folder: "_data/noticias"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    label_singular: "Notícia"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "Resumo", name: "resumo", widget: "text" }
+      - { label: "Conteúdo completo", name: "body", widget: "markdown" }
+      - { label: "Imagem", name: "imagem", widget: "image", required: false }
