@@ -16,25 +16,31 @@ collections:
         label: "Página Inicial"
         file: "_data/inicio.json"
         fields:
-          - { label: "Título principal", name: "hero_titulo", widget: "string" }
-          - { label: "Frase motivacional", name: "hero_motto", widget: "string" }
-          - { label: "Texto de introdução", name: "hero_texto", widget: "text" }
+          - { label: "Frase motivacional (PT)", name: "hero_motto_pt", widget: "string" }
+          - { label: "Frase motivacional (EN)", name: "hero_motto_en", widget: "string" }
+          - { label: "Texto de introdução (PT)", name: "hero_texto_pt", widget: "text" }
+          - { label: "Texto de introdução (EN)", name: "hero_texto_en", widget: "text" }
 
       - name: "sobre"
         label: "Sobre a Empresa"
         file: "_data/sobre.json"
         fields:
-          - { label: "Parágrafo 1", name: "paragrafo1", widget: "text" }
-          - { label: "Parágrafo 2", name: "paragrafo2", widget: "text" }
+          - { label: "Parágrafo 1 (PT)", name: "paragrafo1_pt", widget: "text" }
+          - { label: "Parágrafo 1 (EN)", name: "paragrafo1_en", widget: "text" }
+          - { label: "Parágrafo 2 (PT)", name: "paragrafo2_pt", widget: "text" }
+          - { label: "Parágrafo 2 (EN)", name: "paragrafo2_en", widget: "text" }
           - { label: "Nome do CEO", name: "ceo_nome", widget: "string" }
 
       - name: "campanha"
         label: "Campanha Agrícola 2025/2026"
         file: "_data/campanha.json"
         fields:
-          - { label: "Título", name: "titulo", widget: "string" }
-          - { label: "Texto principal", name: "texto", widget: "text" }
-          - { label: "Citação", name: "citacao", widget: "string" }
+          - { label: "Título (PT)", name: "titulo_pt", widget: "string" }
+          - { label: "Título (EN)", name: "titulo_en", widget: "string" }
+          - { label: "Texto principal (PT)", name: "texto_pt", widget: "text" }
+          - { label: "Texto principal (EN)", name: "texto_en", widget: "text" }
+          - { label: "Citação (PT)", name: "citacao_pt", widget: "string" }
+          - { label: "Citação (EN)", name: "citacao_en", widget: "string" }
 
       - name: "contactos"
         label: "Contactos"
@@ -44,19 +50,32 @@ collections:
           - { label: "Telefone 2", name: "tel2", widget: "string" }
           - { label: "Email 1", name: "email1", widget: "string" }
           - { label: "Email 2", name: "email2", widget: "string" }
-          - { label: "Morada escritório", name: "morada", widget: "text" }
+          - { label: "Morada do escritório", name: "morada", widget: "text" }
 
   - name: "servicos"
     label: "Serviços"
-    folder: "_data/servicos"
-    create: true
-    slug: "{{slug}}"
-    label_singular: "Serviço"
-    fields:
-      - { label: "Nome do serviço", name: "title", widget: "string" }
-      - { label: "Ícone (emoji)", name: "icone", widget: "string", default: "🌾" }
-      - { label: "Descrição", name: "descricao", widget: "text" }
-      - { label: "Activo", name: "activo", widget: "boolean", default: true }
+    files:
+      - name: "lista"
+        label: "Lista de Serviços"
+        file: "_data/servicos.json"
+        fields:
+          - label: "Serviços"
+            name: "items"
+            widget: "list"
+            label_singular: "Serviço"
+            fields:
+              - { label: "ID (não alterar)", name: "id", widget: "string" }
+              - { label: "Ícone (emoji)", name: "icone", widget: "string", default: "🌾" }
+              - { label: "Título (PT)", name: "title_pt", widget: "string" }
+              - { label: "Título (EN)", name: "title_en", widget: "string" }
+              - { label: "Resumo (PT)", name: "summary_pt", widget: "text" }
+              - { label: "Resumo (EN)", name: "summary_en", widget: "text" }
+              - { label: "Descrição completa (PT)", name: "description_pt", widget: "text" }
+              - { label: "Descrição completa (EN)", name: "description_en", widget: "text" }
+              - { label: "Destaques (PT) — um por linha", name: "highlights_pt", widget: "list" }
+              - { label: "Destaques (EN) — one per line", name: "highlights_en", widget: "list" }
+              - { label: "Activo", name: "activo", widget: "boolean", default: true }
+              - { label: "Ordem de apresentação", name: "ordem", widget: "number", default: 1 }
 
   - name: "noticias"
     label: "Notícias / Actualizações"
