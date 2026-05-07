@@ -110,32 +110,7 @@
       </div>
       <a href="servicos.html" class="btn-primary" data-i18n="btn_services">Ver serviços</a>
     </div>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">🌾</div>
-        <h3>Produção de arroz</h3>
-        <p>Cultivo e produção de arroz de qualidade no Distrito de Moma, Província de Nampula.</p>
-        <a href="servico.html?id=arroz" class="btn-saiba-mais">Saiba mais →</a>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🌽</div>
-        <h3>Cereais e legumes</h3>
-        <p>Produção diversificada de cereais e legumes para consumo local e comercialização.</p>
-        <a href="servico.html?id=cereais" class="btn-saiba-mais">Saiba mais →</a>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🚜</div>
-        <h3>Mecanização agrícola</h3>
-        <p>Serviços de mecanização e preparação de terras para agricultores e cooperativas.</p>
-        <a href="servico.html?id=mecanizacao" class="btn-saiba-mais">Saiba mais →</a>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🏭</div>
-        <h3>Processamento industrial</h3>
-        <p>Moageira e processamento industrial de cereais para o mercado moçambicano.</p>
-        <a href="servico.html?id=moageira" class="btn-saiba-mais">Saiba mais →</a>
-      </div>
-    </div>
+    <div class="services-grid" id="services-grid" data-limit="4"></div>
   </div>
 </section>
 
@@ -215,7 +190,6 @@
 </a>
 
 <script src="js/main.js"></script>
-<script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </body>
 </html>
