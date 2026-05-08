@@ -43,7 +43,7 @@ collections:
           - { label: "Citação (EN)", name: "citacao_en", widget: "string" }
 
       - name: "contactos"
-        label: "Contactos"
+        label: "Contactos & Redes Sociais"
         file: "_data/contactos.json"
         fields:
           - { label: "Telefone 1", name: "tel1", widget: "string" }
@@ -51,6 +51,9 @@ collections:
           - { label: "Email 1", name: "email1", widget: "string" }
           - { label: "Email 2", name: "email2", widget: "string" }
           - { label: "Morada do escritório", name: "morada", widget: "text" }
+          - { label: "WhatsApp (só números, ex: 258841031220)", name: "whatsapp", widget: "string" }
+          - { label: "Facebook (URL completo)", name: "facebook", widget: "string" }
+          - { label: "Instagram (URL completo)", name: "instagram", widget: "string" }
 
   - name: "servicos"
     label: "Serviços"
@@ -74,6 +77,12 @@ collections:
               - { label: "Descrição completa (EN)", name: "description_en", widget: "text" }
               - { label: "Destaques (PT) — um por linha", name: "highlights_pt", widget: "list" }
               - { label: "Destaques (EN) — one per line", name: "highlights_en", widget: "list" }
+              - { label: "Imagem de banner (capa do serviço)", name: "imagem_banner", widget: "image", required: false }
+              - label: "Galeria de imagens"
+                name: "imagens"
+                widget: "list"
+                field: { label: "Imagem", name: "imagem", widget: "image" }
+                required: false
               - { label: "Activo", name: "activo", widget: "boolean", default: true }
               - { label: "Ordem de apresentação", name: "ordem", widget: "number", default: 1 }
 
