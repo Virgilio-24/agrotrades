@@ -10,8 +10,12 @@
       "description_en": "AGRO TRADES focuses on intensive rice cultivation in the Moma District, Nampula, leveraging the region's favourable climatic and hydrographic conditions. We use high-yield varieties combined with modern agronomic practices, including strict water management, proper fertilisation and integrated pest control. Our process ensures high-quality rice destined for both local and regional markets, directly contributing to Mozambique's food sovereignty.",
       "highlights_pt": ["Variedades de alto rendimento adaptadas ao clima local","Gestão integrada de água e fertilização","Controlo de pragas com métodos sustentáveis","Colheita mecanizada para maior eficiência","Contribuição directa para a segurança alimentar nacional"],
       "highlights_en": ["High-yield varieties adapted to local climate","Integrated water and fertilisation management","Sustainable pest control methods","Mechanised harvesting for greater efficiency","Direct contribution to national food security"],
-      "imagem_banner": "",
-      "imagens": [],
+      "imagem_banner": "https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=1400&h=600&q=80",
+      "imagens": [
+        "https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?auto=format&fit=crop&w=800&h=600&q=80",
+        "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=800&h=600&q=80",
+        "https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=800&h=600&q=80"
+      ],
       "activo": true,
       "ordem": 1
     },
@@ -25,8 +29,12 @@
       "description_en": "Beyond rice, AGRO TRADES invests in diversified production including maize, beans, peanuts, sesame and other essential crops. This diversification not only reduces monoculture risks but ensures a continuous supply of staple foods to local communities. We work with partner farmers to expand cultivation areas and implement crop rotation, improving soil health and long-term productivity.",
       "highlights_pt": ["Milho, feijão, amendoim e gergelim","Rotação de culturas para saúde do solo","Parceria com agricultores locais","Sementes melhoradas de alto rendimento","Escoamento garantido para o mercado regional"],
       "highlights_en": ["Maize, beans, peanuts and sesame","Crop rotation for soil health","Partnership with local farmers","Improved high-yield seeds","Guaranteed outlet to regional markets"],
-      "imagem_banner": "",
-      "imagens": [],
+      "imagem_banner": "https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1400&h=600&q=80",
+      "imagens": [
+        "https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=800&h=600&q=80",
+        "https://images.unsplash.com/photo-1551754655-cd27e38d2076?auto=format&fit=crop&w=800&h=600&q=80",
+        "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&h=600&q=80"
+      ],
       "activo": true,
       "ordem": 2
     },
@@ -40,8 +48,11 @@
       "description_en": "Our industrial processing unit represents a fundamental link in the agricultural value chain. Equipped with modern milling equipment, AGRO TRADES transforms locally produced cereals into flour and other finished products ready for consumption. This service is also available to third parties — farmers, cooperatives and associations — who need to process their harvest quickly and efficiently.",
       "highlights_pt": ["Moageira moderna de alta capacidade","Processamento de arroz, milho e outros cereais","Serviço disponível para terceiros","Garantia de qualidade no produto final","Embalagem e preparação para comercialização"],
       "highlights_en": ["High-capacity modern milling","Processing of rice, maize and other cereals","Service available to third parties","Quality assurance on final product","Packaging and preparation for trade"],
-      "imagem_banner": "",
-      "imagens": [],
+      "imagem_banner": "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=1400&h=600&q=80",
+      "imagens": [
+        "https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?auto=format&fit=crop&w=800&h=600&q=80",
+        "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&h=600&q=80"
+      ],
       "activo": true,
       "ordem": 3
     },
@@ -55,8 +66,12 @@
       "description_en": "Proper soil preparation is the foundation of any successful agricultural production. AGRO TRADES offers a complete land preparation service including clearing, tilling, ploughing, harrowing and levelling. With modern equipment and experienced operators, we prepare soils for annual and perennial crops, ensuring every hectare is in the best conditions to receive seed and maximise productivity.",
       "highlights_pt": ["Limpeza e desbaste de terrenos","Lavoura profunda e gradagem","Nivelamento para irrigação eficiente","Operadores certificados e experientes","Serviço disponível para particulares e cooperativas"],
       "highlights_en": ["Land clearing and tilling","Deep ploughing and harrowing","Levelling for efficient irrigation","Certified and experienced operators","Service available for individuals and cooperatives"],
-      "imagem_banner": "",
-      "imagens": [],
+      "imagem_banner": "https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1400&h=600&q=80",
+      "imagens": [
+        "https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=800&h=600&q=80",
+        "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&h=600&q=80",
+        "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=800&h=600&q=80"
+      ],
       "activo": true,
       "ordem": 4
     },
@@ -70,8 +85,11 @@
       "description_en": "AGRO TRADES actively participates in the 2025/2026 Agricultural Campaign, responding to the Mozambican Government's call for a significant increase in food production. Our participation covers expanding cultivated areas, increasing productivity per hectare, and providing technical support to smallholder farmers in the Nampula region. We are committed to national food sovereignty goals and aligned with presidential directives for agricultural sector development.",
       "highlights_pt": ["Alargamento das áreas de cultivo","Apoio a pequenos agricultores","Alinhamento com metas governamentais","Foco na soberania alimentar","Relatórios de progresso periódicos"],
       "highlights_en": ["Expansion of cultivated areas","Support for smallholder farmers","Alignment with government targets","Focus on food sovereignty","Periodic progress reports"],
-      "imagem_banner": "",
-      "imagens": [],
+      "imagem_banner": "https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1400&h=600&q=80",
+      "imagens": [
+        "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&h=600&q=80",
+        "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=800&h=600&q=80"
+      ],
       "activo": true,
       "ordem": 5
     },
@@ -85,8 +103,12 @@
       "description_en": "Access to mechanisation is one of the greatest challenges for small and medium-sized Mozambican farmers. AGRO TRADES offers agricultural mechanisation services that allow any producer to access tractors, combine harvesters, mechanical seeders and other high-performance implements. We work with affordable prices and flexible schedules to ensure mechanisation reaches those who need it most, at the right time in the campaign.",
       "highlights_pt": ["Tractores e alfaias para aluguer","Ceifeiras-debulhadoras para colheita","Operadores incluídos no serviço","Preços acessíveis e calendário flexível","Manutenção e apoio técnico garantidos"],
       "highlights_en": ["Tractors and implements for hire","Combine harvesters for crop collection","Operators included in the service","Affordable prices and flexible schedule","Guaranteed maintenance and technical support"],
-      "imagem_banner": "",
-      "imagens": [],
+      "imagem_banner": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1400&h=600&q=80",
+      "imagens": [
+        "https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=800&h=600&q=80",
+        "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=600&q=80",
+        "https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=800&h=600&q=80"
+      ],
       "activo": true,
       "ordem": 6
     },
@@ -100,8 +122,11 @@
       "description_en": "Our technical support service brings specialist knowledge directly to the field where it is most needed. Qualified agricultural technicians accompany partner farmers from soil preparation to harvest, providing practical guidance on seed selection, planting densities, fertilisation, water management and pest and disease control. This service is especially valuable for farmers transitioning to more modern and productive practices.",
       "highlights_pt": ["Técnicos qualificados no campo","Orientação sobre selecção de sementes","Gestão de pragas e doenças","Formação em boas práticas agrícolas","Acompanhamento desde a sementeira até à colheita"],
       "highlights_en": ["Qualified technicians in the field","Seed selection guidance","Pest and disease management","Good agricultural practice training","Monitoring from sowing to harvest"],
-      "imagem_banner": "",
-      "imagens": [],
+      "imagem_banner": "https://images.unsplash.com/photo-1536054902516-4c6dab8b29b5?auto=format&fit=crop&w=1400&h=600&q=80",
+      "imagens": [
+        "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=800&h=600&q=80",
+        "https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=800&h=600&q=80"
+      ],
       "activo": true,
       "ordem": 7
     },
@@ -115,8 +140,12 @@
       "description_en": "One of the biggest obstacles to the prosperity of Mozambican farmers is the difficulty in selling production at fair prices. AGRO TRADES acts as a trusted intermediary, connecting local producers to buyers, regional markets and established distribution channels. We support negotiations, facilitate logistics and ensure transparency in all transactions, making sure the producer receives fair remuneration for their work.",
       "highlights_pt": ["Ligação directa a compradores e mercados","Apoio em negociações comerciais","Logística e transporte da produção","Preços justos e transparência total","Rede de contactos regional estabelecida"],
       "highlights_en": ["Direct link to buyers and markets","Support in commercial negotiations","Production logistics and transport","Fair prices and full transparency","Established regional contact network"],
-      "imagem_banner": "",
-      "imagens": [],
+      "imagem_banner": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1400&h=600&q=80",
+      "imagens": [
+        "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&h=600&q=80",
+        "https://images.unsplash.com/photo-1498579150354-977475b7ea0b?auto=format&fit=crop&w=800&h=600&q=80",
+        "https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=800&h=600&q=80"
+      ],
       "activo": true,
       "ordem": 8
     }
