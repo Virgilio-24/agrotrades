@@ -263,14 +263,24 @@ function buildServicesDropdown() {
   const lang = currentLang;
   const seeAll = lang === 'pt' ? 'Ver todos os serviços' : 'View all services';
 
+  const items = SERVICES.map((s, i) => {
+    const num = String(s.ordem || i + 1).padStart(2, '0');
+    const gradient = CARD_GRADIENTS[(s.ordem - 1) % CARD_GRADIENTS.length];
+    const thumb = s.imagem_banner
+      ? `<img src="${s.imagem_banner}" alt="" loading="lazy"/>`
+      : `<div class="dd-thumb-placeholder" style="background:${gradient};width:100%;height:100%;border-radius:6px;"></div>`;
+    return `<li><a href="servico.html?id=${s.id}">
+      <div class="dd-thumb">${thumb}</div>
+      <div class="dd-item-text">
+        <span class="dd-num">${num}</span>
+        <span class="dd-title">${s['title_' + lang]}</span>
+      </div>
+    </a></li>`;
+  }).join('');
+
   dropdown.innerHTML =
-    SERVICES.map((s, i) =>
-      `<li><a href="servico.html?id=${s.id}">
-        <span class="dd-num">${String(s.ordem || i + 1).padStart(2, '0')}</span>
-        ${s['title_' + lang]}
-      </a></li>`
-    ).join('') +
-    `<li class="dd-divider"></li>
+    `<div class="dd-scroll">${items}</div>
+     <li class="dd-divider"></li>
      <li class="dd-all"><a href="servicos.html">${seeAll} →</a></li>`;
 }
 
@@ -359,6 +369,44 @@ function renderServiceDetail() {
   }
 
   document.querySelectorAll('.sd-back').forEach(l => { l.href = 'servicos.html'; });
+
+  // Related services
+  renderRelatedServices(id);
+}
+
+function renderRelatedServices(currentId) {
+  const el = document.getElementById('related-services');
+  if (!el) return;
+  const lang = currentLang;
+  const others = SERVICES.filter(s => s.id !== currentId).slice(0, 4);
+  if (!others.length) { el.style.display = 'none'; return; }
+
+  const label = translations[lang].saiba_mais;
+  const title = lang === 'pt' ? 'Outros serviços' : 'Other services';
+
+  const cards = others.map((s, i) => {
+    const num = String(s.ordem || i + 1).padStart(2, '0');
+    const gradient = CARD_GRADIENTS[(s.ordem - 1) % CARD_GRADIENTS.length];
+    const banner = s.imagem_banner
+      ? `<img src="${s.imagem_banner}" alt="${s['title_' + lang]}" class="sc-banner-img" loading="lazy"/>`
+      : `<div class="sc-banner-placeholder" style="background:${gradient}"><span class="sc-num">${num}</span></div>`;
+    return `
+    <div class="service-card sc-img">
+      <div class="sc-banner">${banner}</div>
+      <div class="sc-body">
+        <h3>${s['title_' + lang]}</h3>
+        <p>${s['summary_' + lang]}</p>
+        <a href="servico.html?id=${s.id}" class="btn-saiba-mais">${label} →</a>
+      </div>
+    </div>`;
+  }).join('');
+
+  el.innerHTML = `
+    <div class="related-services">
+      <h3 class="related-services-title">${title}</h3>
+      <div class="services-grid">${cards}</div>
+    </div>`;
+  el.style.display = 'block';
 }
 
 // ── INIT ──
