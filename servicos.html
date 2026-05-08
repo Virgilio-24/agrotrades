@@ -15,7 +15,13 @@
   <ul class="nav-links">
     <li><a href="index.html" data-i18n="nav_home">Início</a></li>
     <li><a href="quem-somos.html" data-i18n="nav_about">Quem Somos</a></li>
-    <li><a href="servicos.html" class="active" data-i18n="nav_services">Serviços</a></li>
+    <li class="nav-has-dropdown">
+    <a href="servicos.html" class="active" data-i18n="nav_services">Serviços</a>
+    <button class="dropdown-toggle" aria-label="Expandir serviços" onclick="toggleDropdown(this)">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+    <ul class="nav-dropdown" id="services-dropdown"></ul>
+  </li>
     <li><a href="campanha.html" data-i18n="nav_campaign">Campanha 2025/26</a></li>
     <li><a href="contactos.html" data-i18n="nav_contact">Contactos</a></li>
   </ul>
@@ -75,7 +81,13 @@
       <h4 data-i18n="footer_links">Links</h4>
       <ul>
         <li><a href="index.html" data-i18n="nav_home">Início</a></li>
-        <li><a href="servicos.html" data-i18n="nav_services">Serviços</a></li>
+        <li class="nav-has-dropdown">
+    <a href="servicos.html" data-i18n="nav_services">Serviços</a>
+    <button class="dropdown-toggle" aria-label="Expandir serviços" onclick="toggleDropdown(this)">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+    <ul class="nav-dropdown" id="services-dropdown"></ul>
+  </li>
         <li><a href="campanha.html" data-i18n="nav_campaign">Campanha</a></li>
         <li><a href="contactos.html" data-i18n="nav_contact">Contactos</a></li>
       </ul>

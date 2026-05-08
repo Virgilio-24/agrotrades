@@ -242,6 +242,9 @@ function setLang(lang) {
   });
   document.documentElement.lang = lang;
 
+  // Rebuild dropdown when language changes
+  buildServicesDropdown();
+
   // Re-render service cards when language changes
   const grid = document.getElementById('services-grid');
   if (grid && SERVICES.length) {
@@ -252,6 +255,39 @@ function setLang(lang) {
   // Re-render service detail when language changes
   if (document.getElementById('sd-title')) renderServiceDetail();
 }
+
+// ── NAV DROPDOWN ──
+function buildServicesDropdown() {
+  const dropdown = document.getElementById('services-dropdown');
+  if (!dropdown || !SERVICES.length) return;
+  const lang = currentLang;
+  const seeAll = lang === 'pt' ? 'Ver todos os serviços' : 'View all services';
+
+  dropdown.innerHTML =
+    SERVICES.map((s, i) =>
+      `<li><a href="servico.html?id=${s.id}">
+        <span class="dd-num">${String(s.ordem || i + 1).padStart(2, '0')}</span>
+        ${s['title_' + lang]}
+      </a></li>`
+    ).join('') +
+    `<li class="dd-divider"></li>
+     <li class="dd-all"><a href="servicos.html">${seeAll} →</a></li>`;
+}
+
+function toggleDropdown(btn) {
+  const li = btn.closest('.nav-has-dropdown');
+  const isOpen = li.classList.contains('open');
+  // Close all other dropdowns
+  document.querySelectorAll('.nav-has-dropdown.open').forEach(el => el.classList.remove('open'));
+  if (!isOpen) li.classList.add('open');
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', e => {
+  if (!e.target.closest('.nav-has-dropdown')) {
+    document.querySelectorAll('.nav-has-dropdown.open').forEach(el => el.classList.remove('open'));
+  }
+});
 
 // ── MOBILE MENU ──
 function toggleMenu() {
@@ -336,6 +372,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   document.querySelectorAll('.nav-links a').forEach(a => {
     if (a.getAttribute('href') === path) a.classList.add('active');
   });
+
+  // Build nav dropdown
+  buildServicesDropdown();
 
   // Render service cards grid (index.html uses data-limit="4", servicos.html has no limit)
   const grid = document.getElementById('services-grid');
