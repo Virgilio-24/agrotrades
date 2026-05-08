@@ -21,6 +21,18 @@
   --shadow-green: 0 8px 32px rgba(58,140,47,0.2);
   --nav-h: 80px;
   --radius: 20px;
+  --px: clamp(20px, 5vw, 80px);
+}
+
+/* ── CONTAINER ── */
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 var(--px);
+  width: 100%;
+}
+.container--narrow {
+  max-width: 720px;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -42,7 +54,7 @@ nav {
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(224,221,212,0.6);
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0 5%;
+  padding: 0 var(--px);
   transition: box-shadow 0.3s;
 }
 
@@ -94,7 +106,7 @@ nav {
 .hero {
   min-height: 100vh;
   display: flex; align-items: center;
-  padding: var(--nav-h) 5% 0;
+  padding: var(--nav-h) var(--px) 0;
   position: relative; overflow: hidden;
   background: linear-gradient(145deg, #071f04 0%, #0f3309 25%, #1a5210 55%, #2a7a1a 80%, #3d9e28 100%);
 }
@@ -218,7 +230,7 @@ nav {
 .stats-bar {
   background: white;
   border-bottom: 1px solid var(--border);
-  padding: 0 5%;
+  padding: 0 var(--px);
   display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 }
 .stat-item {
@@ -245,7 +257,7 @@ nav {
 }
 
 /* ── SECTIONS ── */
-section { padding: 88px 5%; }
+section { padding: 88px var(--px); }
 
 .section-tag {
   display: inline-flex; align-items: center; gap: 8px;
@@ -444,7 +456,7 @@ section { padding: 88px 5%; }
 /* ── SERVICE DETAIL HERO (sd-hero replaces page-hero on servico.html) ── */
 .sd-hero {
   min-height: 420px;
-  padding: calc(var(--nav-h) + 56px) 5% 64px;
+  padding: calc(var(--nav-h) + 56px) var(--px) 64px;
   position: relative; overflow: hidden;
   display: flex; align-items: flex-end;
   background: linear-gradient(145deg, #0f3a08, #2a7a1a);
@@ -546,7 +558,7 @@ section { padding: 88px 5%; }
 /* ── CAMPANHA BANNER ── */
 .campanha-banner {
   background: linear-gradient(135deg, var(--green-deeper) 0%, var(--green-dark) 50%, var(--green) 100%);
-  border-radius: 24px; padding: 60px 64px; margin: 0 5%;
+  border-radius: 24px; padding: 60px 64px; margin: 0 var(--px);
   display: flex; align-items: center; justify-content: space-between;
   gap: 40px; flex-wrap: wrap;
   position: relative; overflow: hidden;
@@ -665,7 +677,7 @@ section { padding: 88px 5%; }
 footer {
   background: linear-gradient(170deg, #0a1f07, #0d2208 60%, #0f2a09);
   color: rgba(255,255,255,0.65);
-  padding: 64px 5% 28px;
+  padding: 64px var(--px) 28px;
   position: relative; overflow: hidden;
 }
 footer::before {
@@ -704,7 +716,7 @@ footer ul a:hover { color: var(--orange); transform: translateX(4px); }
 
 /* ── PAGE HERO (inner pages) ── */
 .page-hero {
-  padding: calc(var(--nav-h) + 72px) 5% 72px;
+  padding: calc(var(--nav-h) + 72px) var(--px) 72px;
   background: linear-gradient(150deg, #071f04 0%, #0f3309 30%, #1e5e12 65%, #2e8c1c 100%);
   position: relative; overflow: hidden;
 }
@@ -968,13 +980,13 @@ footer ul a:hover { color: var(--orange); transform: translateX(4px); }
   .about-grid, .contact-grid, .locations-grid, .footer-grid {
     grid-template-columns: 1fr;
   }
-  .campanha-banner { padding: 36px 28px; margin: 0 4%; }
-  .hero { min-height: auto; padding: calc(var(--nav-h) + 48px) 5% 64px; }
+  .campanha-banner { padding: 36px 28px; margin: 0 var(--px); }
+  .hero { min-height: auto; padding: calc(var(--nav-h) + 48px) var(--px) 64px; }
   .stats-bar { grid-template-columns: repeat(2, 1fr); }
   .stat-item:nth-child(2) { border-right: none; }
   .stat-item { border-bottom: 1px solid var(--border); }
   .stat-item:nth-child(3), .stat-item:nth-child(4) { border-bottom: none; }
-  section { padding: 64px 5%; }
+  section { padding: 64px var(--px); }
   .sd-body { grid-template-columns: 1fr; }
   .sd-highlights-box { position: static; }
   .about-card { padding: 32px 28px; }
